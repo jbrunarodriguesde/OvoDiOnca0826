@@ -1,0 +1,6 @@
+{
+  "name": "Ovo di Onça",
+  "description": "Clube de assinatura de ovos caipiras frescos direto da fazenda em Onça de Pitangui - MG com entrega programada para BH e região.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

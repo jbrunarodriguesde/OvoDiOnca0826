@@ -6,20 +6,22 @@
     --font-body: 'Poppins', sans-serif;
     --color-primary-forest: #1c2826;
     --color-rustic-brown: #2b1e1a;
-    --color-surface-dark: #1c110d;
-    --color-surface-card: #251915;
-    --color-surface-highest: #40312d;
     --color-warm-cream: #f4eade;
-    --color-cream-light: #fdf8f2;
+    --color-cream-light: #fdfbf7;
+    --color-cream-subtle: #f9f5ef;
+    --color-cream-border: rgba(28, 40, 38, 0.08);
     --color-accent-gold: #e67e22;
     --color-accent-amber: #f39c12;
-    --color-muted-stone: #c3c8c6;
+    --color-text-dark: #1c2826;
+    --color-text-muted: #536360;
+    --color-text-light: #73827f;
   }
 
   body {
     font-family: var(--font-body);
-    background-color: var(--color-primary-forest);
-    color: var(--color-warm-cream);
+    background-color: #fdfbf7;
+    color: var(--color-text-dark);
+    overflow-x: hidden;
   }
 
   h1, h2, h3, .font-aclonica {
@@ -36,13 +38,78 @@
   width: 8px;
 }
 ::-webkit-scrollbar-track {
-  background: #1c110d;
+  background: #f4eade;
 }
 ::-webkit-scrollbar-thumb {
-  background: #40312d;
+  background: #c9b9a6;
   border-radius: 4px;
 }
 ::-webkit-scrollbar-thumb:hover {
   background: #e67e22;
 }
+
+/* Link Hover Underline Animation */
+.animated-link {
+  position: relative;
+  display: inline-block;
+}
+
+.animated-link::after {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background-color: #e67e22;
+  transition: width 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+  border-radius: 9999px;
+}
+
+.animated-link:hover::after {
+  width: 100%;
+}
+
+.animated-link-active::after {
+  width: 100%;
+}
+
+/* Smooth Input Range Thumb */
+input[type='range']::-webkit-slider-thumb {
+  appearance: none;
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  background: #e67e22;
+  cursor: pointer;
+  box-shadow: 0 2px 8px rgba(230, 126, 34, 0.4);
+  border: 2.5px solid #ffffff;
+  transition: transform 0.15s ease, background-color 0.15s ease;
+}
+
+input[type='range']::-webkit-slider-thumb:hover {
+  transform: scale(1.15);
+  background: #d67214;
+}
+
+input[type='range']::-moz-range-thumb {
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  background: #e67e22;
+  cursor: pointer;
+  box-shadow: 0 2px 8px rgba(230, 126, 34, 0.4);
+  border: 2.5px solid #ffffff;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, ::before, ::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+
 

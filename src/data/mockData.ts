@@ -1,4 +1,4 @@
-import { Plan, Neighborhood, Recipe } from '../types';
+import { Plan, Neighborhood } from '../types';
 
 export const HERO_IMAGE_URL =
   'https://lh3.googleusercontent.com/aida-public/AB6AXuBAkZqfWj2d8mJq899XUnUW35logAczKKExj0qXkusSDCp3OeGVBffhWWMc_Rx59V2u1JAOQucQi_2qygY0zkgitq7yGRpl1kRxjsYewdzDgT-ZqAvcpLBX5Iu_wiwDTlHs_fZ4cfcMnquLjvsj-gf-S3f0DU3rAKvZ4eG8_qd8KuNbgx5I6rx0HNgPhs5OyNKHZ1Hdnxqu0xYGXqUhqSmxTvCSS5FvyURbfI67V9XTsYP30rybSyKrWw';
@@ -133,84 +133,36 @@ export const COMPARISON_ROWS = [
   },
 ];
 
-export const RECIPES: Recipe[] = [
+export const FAQ_ITEMS = [
   {
-    id: 'omelete-mineira',
-    title: 'Omelete Caipira da Onça',
-    subtitle: 'Textura cremosa e gema aveludada com queijo canastra',
-    prepTime: '10 min',
-    difficulty: 'Fácil',
-    servings: '1 a 2 porções',
-    description:
-      'Uma omelete clássica de fazenda que valoriza a densidade e o sabor concentrado da gema caipira autêntica.',
-    ingredients: [
-      '3 ovos caipiras Ovo di Onça',
-      '1 colher (sopa) de manteiga de primeira',
-      '40g de queijo canastra curado ralado',
-      'Cebolinha fresca colhida na hora',
-      'Sal e pimenta-do-reino moída a gosto',
-    ],
-    instructions: [
-      'Quebre os ovos em uma tigela e bata delicadamente com um garfo apenas até misturar a clara e a gema.',
-      'Aqueça uma frigideira antiaderente em fogo baixo e derreta a manteiga sem deixar queimar.',
-      'Despeje os ovos e, com uma espátula, mexa suavemente do centro para as bordas para criar dobras cremosas.',
-      'Quando o centro estiver quase firme (mas ainda brilhante), adicione o queijo canastra e a cebolinha.',
-      'Dobre a omelete ao meio e sirva imediatamente com uma fatia de pão rústico tostado.',
-    ],
-    eggTip:
-      'Por serem colhidos há poucos dias, os ovos caipiras criam uma estrutura muito mais aveludada e não precisam de creme de leite.',
+    question: 'Como funciona a assinatura e as entregas?',
+    answer:
+      'Você escolhe o ritmo ideal (Semanal, Quinzenal ou Mensal) de acordo com o consumo da sua casa. Os ovos são colhidos frescos na fazenda em Onça de Pitangui e entregues na sua porta em dias fixos e programados para o seu bairro em BH e região.',
   },
   {
-    id: 'pao-de-lo-ouro',
-    title: 'Pão de Ló das Gerais',
-    subtitle: 'Massa fofa e dourada tradicional de famílias mineiras',
-    prepTime: '40 min',
-    difficulty: 'Médio',
-    servings: '8 porções',
-    description:
-      'O clássico pão de ló caipira que ganha coloração dourada natural devido ao teor de betacaroteno das gemas.',
-    ingredients: [
-      '6 ovos caipiras Ovo di Onça em temperatura ambiente',
-      '1 xícara de açúcar cristal',
-      '1 xícara de farinha de trigo peneirada',
-      '1 colher (chá) de extrato de baunilha natural',
-      '1 pitada de sal',
-    ],
-    instructions: [
-      'Separe as claras das gemas com cuidado.',
-      'Bata as claras em neve firme com a pitada de sal.',
-      'Sem parar de bater, adicione as gemas uma a uma e depois o açúcar aos poucos.',
-      'Bata por 8 a 10 minutos até formar um creme fofo, volumoso e bem clarinho.',
-      'Desligue a batedeira e incorpore a farinha peneirada delicadamente com movimentos de baixo para cima.',
-      'Asse em forma untada a 180°C por cerca de 25 a 30 minutos.',
-    ],
-    eggTip:
-      'Ovo caipira fresco tem clara densa que retém mais ar ao bater, resultando em um bolo muito mais fofinho.',
+    question: 'Existe fidelidade ou multa de cancelamento?',
+    answer:
+      'Não! Nenhuma fidelidade ou taxa oculta. Você tem total liberdade para pausar temporariamente durante viagens ou cancelar quando quiser com apenas uma mensagem no WhatsApp.',
   },
   {
-    id: 'ovo-poche-perfeito',
-    title: 'Ovo Poché Ouro com Torrada Rústica',
-    subtitle: 'Gema líquida perfeita e clara uniforme sem vinagre em excesso',
-    prepTime: '8 min',
-    difficulty: 'Médio',
-    servings: '1 porção',
-    description:
-      'O teste definitivo do frescor do ovo: a clara fresca envolve a gema naturalmente sem se dispersar na água.',
-    ingredients: [
-      '2 ovos caipiras Ovo di Onça fresquíssimos',
-      'Água filtrada abundante',
-      '1 colher (sopa) de vinagre de maçã',
-      'Pão de fermentação natural grelhado',
-      'Azeite extravirgem e flor de sal',
-    ],
-    instructions: [
-      'Aqueça a água com o vinagre até atingir pequenas bolhinhas no fundo (cerca de 85°C - sem ferver forte).',
-      'Quebre o ovo primeiro em uma pequena xícara.',
-      'Faça um redemoinho suave na água com uma colher e despeje o ovo no centro.',
-      'Cozinhe por exatamente 3 minutos para gema líquida e clara firme.',
-      'Retire com escumadeira, seque sobre papel toalha e disponha sobre a torrada com azeite e flor de sal.',
-    ],
-    eggTip:
-      'Ovos colhidos há menos de 7 dias têm a clara grossa ("thick albumen") que não se desfaz na panela!',
+    question: 'E se algum ovo quebrar durante o transporte?',
+    answer:
+      'Nossa embalagem é reforçada e pensada para o trajeto rural. Caso ocorra qualquer avaria durante o caminho, basta nos mandar uma foto no WhatsApp e fazemos a reposição imediata e sem nenhum custo adicional na próxima entrega.',
+  },
+  {
+    question: 'Quais são as formas de pagamento aceitas?',
+    answer:
+      'Trabalhamos com cobrança mensal simplificada via PIX (com envio de comprovante e aviso automático) ou Cartão de Crédito recorrente que não compromete o limite total do seu cartão.',
+  },
+  {
+    question: 'Qual é a real diferença do ovo caipira Ovo di Onça?',
+    answer:
+      'Nossas galinhas vivem soltas com acesso diário a pastagem verde, sol e água fresca. A alimentação é 100% natural, livre de hormônios e antibióticos. O resultado é uma gema densa, de cor ouro alaranjada intensa, com sabor autêntico de fazenda e colheita máxima de até 7 dias.',
+  },
+  {
+    question: 'Como faço para alterar meu endereço ou pausar entregas?',
+    answer:
+      'Pelo nosso Portal do Assinante na página inicial ou diretamente com nosso atendimento familiar no WhatsApp (31) 2516-7561.',
   },
 ];
+

@@ -19,19 +19,6 @@ export interface Neighborhood {
   isServed: boolean;
 }
 
-export interface Recipe {
-  id: string;
-  title: string;
-  subtitle: string;
-  prepTime: string;
-  difficulty: 'Fácil' | 'Médio' | 'Gourmet';
-  servings: string;
-  description: string;
-  ingredients: string[];
-  instructions: string[];
-  eggTip: string;
-}
-
 export interface SubscriberAccount {
   id: string;
   name: string;

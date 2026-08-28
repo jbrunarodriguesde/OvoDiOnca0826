@@ -126,8 +126,13 @@ export function Footer() {
               <a href="#validacao-entrega" className="hover:text-[#f4eade] hover:underline">
                 Validação de Entrega
               </a>
-              <a href="#receitas" className="hover:text-[#f4eade] hover:underline">
-                Receitas da Fazenda
+              <a
+                href="https://ovodionca.com.br/Receitas.html"
+                target="_blank"
+                rel="noreferrer"
+                className="hover:text-[#f4eade] hover:underline"
+              >
+                Receitas
               </a>
             </nav>
           </div>
